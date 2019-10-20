@@ -1,0 +1,85 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  label {
+    @extend %label;
+  }
+  input {
+    @extend %input;
+    width: 230px;
+  }
+}
+
+
+.form__checkbox-group {
+  [type=checkbox] {
+    display: none;
+  }
+
+
+  [type=checkbox]:checked + label > div::after {
+    opacity: 1;
+  }
+  [type=checkbox]:not(:checked) + label > div::after {
+    opacity: 0;
+  }
+
+  label {
+    @extend %checkbox;
+
+    .control-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      border: 0px solid #000000;
+      background: #E3B873;
+      &:after{
+        content: '';
+        @include background("../assets/images/check.svg", 4px 4px);
+        position: absolute;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+} 
+
+.measurement-request__form {
+  background: $bg-color;
+  height: 510px;
+  align-self: center;
+    .form-group {
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-top: 50px;
+      label {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      input {
+        width: 100%;
+        font-family: 'FuturaMediumC';
+        font-size: 18px;
+        line-height: 25px;
+        background: inherit;
+        color: $text-color-white;
+      }
+    }
+    .form__checkbox-group {
+      padding-left: 50px;
+      label {
+        color: $text-color-white;
+      }
+    }
+  button {
+    width: 45%;
+    height: 51px;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+    margin-left: 245px;
+    margin-top: 20px; 
+    @media (max-width: 1300px){
+      margin-left: 43%;
+    }
+  }
+}

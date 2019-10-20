@@ -1,0 +1,98 @@
+.online-control{
+  background: $bg-color;
+  position: relative;
+  @media(max-width: 1300px) {
+    margin-top: -5px;
+  }
+
+  &__title-wrap {
+    height: 430px;
+    @extend %title-wrapper;
+    @include background("../assets/images/camera.svg", 70px 140px);
+    @media (max-width: 768px) {
+      height: 170px;
+      padding-top: 50px;
+      background-position-y: 90px;
+    }
+    @media (max-width: 375px) {
+      height: 73px;
+      width: 225px;
+      padding-top: 10px;
+      background-position: 50px 40px;
+    }
+
+    h3 {
+      color: $text-color-white;
+      text-align: center;
+      font-size: 22px;
+      line-height: 30px;
+      @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+
+
+  &__description {
+    height: 430px;
+    background: #ffffff;
+    color: $text-color-black;
+    font-family: 'FuturaBook';
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    padding: 250px 380px 100px 380px; 
+    @media(max-width: 1300px) {
+      padding: 250px 100px 100px 100px; 
+    }
+    @media(max-width: 768px) {
+      padding: 20px; 
+      height: 170px;
+      margin: 0;
+    }
+    @media(max-width: 414px) {
+      height: auto;
+    }
+    
+    @media (max-width: 375px) {
+      font-size: 14px;
+      line-height: 24px;
+      height: auto;
+      background: #131313;
+      color: $text-color-white;
+      width: 100%;
+      padding: 20px 18px 20px 18px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  &__iframe-wrapper {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    height: 434px;
+    width: 60%;
+    iframe {
+      width: 100%;
+      height: 434px;
+      @media (max-width: 375px){
+        height: 207px;
+        width: 90%;
+      }
+    }
+    @media(max-width: 768px) {
+      position: static;
+      width: 95%;
+      margin: 0 auto;
+    }
+    @media (max-width: 375px) {
+      width: 90%;
+      margin: 0 18px 0 18px;
+      height: 207px;
+      left: 0;
+    }
+  }
+
+}

@@ -1,0 +1,164 @@
+.clients {
+  position: relative;
+  padding-top: 500px;
+  padding-bottom: 300px;
+  @media (max-width: 1024px) {
+    padding-top: 50px;
+  }
+  @include hide-block(414px);
+  &__title-wrap {
+    height: 100px;
+    @extend %title-wrapper;
+    @include background("../assets/images/handshake.svg", 70px 35px);
+    padding: 0;
+    @media (max-width: 1024px) {
+      height: 80px;
+    }
+    h3 {
+      color: #181818;
+      text-align: center;
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: normal;
+    }
+
+  } 
+
+  &__recommend-text {
+    font-family: 'FuturaBook';
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #363636;
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    @media (max-width: 1024px) {
+      width: 50%;
+    }
+  }
+
+  &__clients-wrapper {
+    display: flex;
+    justify-content: center;
+  } 
+
+  &__client{
+    position: relative;
+    width: 30%;
+    padding: 20px;
+    height: 375px;
+    @media (max-width: 768px) {
+      height: auto;
+    }
+  }
+  &__client-photo-name {
+    position: relative;
+    display: flex;
+    img{
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      @media (max-width: 768px) {
+        width: 46px;
+        height: 46px;
+      }
+    }
+    p {
+      font-family: 'YesevaOne';
+      width: 50%;
+      line-height: 23px;
+      color: #181818;
+      margin-left: 20px;
+      @media (max-width: 1024px) {
+        width: 60%;
+      }
+      @media (max-width: 768px) {
+        line-height: 20px;
+        font-size: 14px;
+        width: 70%;
+      }
+    }
+  }
+
+  &__thanks-text {
+    font-family: 'FuturaBook';
+    font-size: 15px;
+    line-height: 27px;
+    color: #959595;
+    @media (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    @media (max-width: 768px) {
+      height: auto;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__apartment-param {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: -26px;
+    width: 80%;
+    height: 54px;
+    font-family: 'YesevaOne';
+    font-size: 17px;
+    line-height: 24px;
+    color: #FFFFFF;
+    @include box-shadow(6px, 0px, 21px, rgba(227,170,84,1));
+    @media (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    @media (max-width: 768px) {
+      position: static;
+      width: 100%;
+    }
+
+
+    .size {
+      width: 40%;
+      background: $brand-color;
+      padding: 14px;
+      @media (max-width: 1024px) {
+        padding: 8px;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        @include background ('../assets/images/area.svg');
+        width: 54px;
+        height: 54px;
+      }
+      span{
+        display: block;
+        text-align: right;
+      }
+    }
+
+    .time {
+      width: 60%;
+      background: $brand-color;
+      margin-left: 1px;
+      padding: 14px;
+      @media (max-width: 1024px) {
+        padding: 8px;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        @include background ('../assets/images/calendar.svg');
+        width: 54px;
+        height: 54px;
+      }
+      span{
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

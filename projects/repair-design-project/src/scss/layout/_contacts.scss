@@ -1,0 +1,174 @@
+.contacts {
+  position: relative;
+  background: #131313;
+  @include flexbox();
+  @include flex-direction(column);
+  padding-bottom: 30px;
+  @media (max-width: 375px) {
+    height: 975px;
+  }
+
+ &__form-title {
+      font-family: 'YesevaOne';
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFFFFF;
+
+  }
+  &__form-wrapper {
+    position: absolute;
+    background: #131313;
+    top: -214px;
+    left: 265px;
+    width: 60%;
+    @media (max-width: 1024px) {
+      top: -25%;
+      left: 9%;
+      width: 80%;
+    }
+    @media (max-width: 375px) {
+      width: 95%;
+      margin: 0 auto;
+      position: static;
+      order: 1;
+    }
+  }
+  &__form {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    @media (max-width: 768px) {
+      width: 95%;
+    }
+    @media (max-width: 375px) {
+      width: 100%;
+      display: block;
+    }
+    & :nth-child(3) {
+      grid-column: 1/span 2;
+    }
+    & :nth-child(4) {
+      grid-column: 1/span 2;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .form-group {
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-top: 50px;
+      @media (max-width: 375px) {
+       padding: 0;
+      }
+      label {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      input {
+        width: 100%;
+        font-family: 'FuturaMediumC';
+        font-size: 18px;
+        line-height: 25px;
+        background: inherit;
+        color: $text-color-white;
+      }
+    }
+    .form__checkbox-group {
+      padding-left: 50px;
+      @media (max-width: 375px) {
+        padding: 0;
+       }
+      label {
+        color: $text-color-white;
+      }
+    }
+    button {
+      width: 200px;
+      height: 51px;
+      font-family: 'FuturaDemiC';
+      font-size: 15px;
+      line-height: 26px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0 auto;
+      grid-column: 1/ span 2;
+      @media (max-width: 375px) {
+        width: 100%;
+        margin-top: 50px;
+       }
+    }
+  }
+
+  &__address-wrapper {
+    padding-top: 300px;
+    @media (max-width: 375px) {
+        order: 3;
+        padding-top: 20px;
+    }
+    p {
+      font-family: 'YesevaOne';
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $brand-color;
+      width: 45%;
+      margin: 0 auto;
+      @media (max-width: 375px) {
+        order: 3;
+        font-size: 18px;
+        line-height: 25px;
+        width: 85%;
+      }
+    }
+  }
+  &__insta {
+    width: 28px;
+    height: 28px;
+    @extend %circle;
+    display: inline-block;
+    margin-left: 47%;
+    margin-top: 20px;
+    @media (max-width: 375px) {
+      margin-left: 40%;
+    }
+    a {
+      @include background ('../assets/images/instagram.svg', 8px 8px);
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+  }
+
+  &__mail {
+    width: 28px;
+    height: 28px;
+    @extend %circle;
+    display: inline-block;
+    a {
+      @include background ('../assets/images/mail.svg', 8px 8px);
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+  }
+
+  &__map {
+    @include background ('../assets/images/map.jpg', 0 50px);
+    width: 60%;
+    background-size: contain;
+    height: 482px;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+      height: 330px;
+    }
+    @media (max-width: 375px) {
+      order: 2;
+      width: 95%;
+      height: 255px;
+    }
+  }
+}

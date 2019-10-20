@@ -1,0 +1,266 @@
+.portfolio {
+  background: $bg-color;
+  @include flexbox();
+  padding-top: 50px;
+  @media (max-width: 414px) {
+    display: block;
+  }
+  &__completed-project {
+    width: 32%;
+    padding-top: 140px;
+    margin-left: 80px;
+    @media (max-width: 1024px) {
+      padding: 0;
+    }
+    @media (max-width: 740px) {
+      z-index: 1;
+    }
+    @media (max-width: 414px) {
+      width: 95%;
+      margin: 0;
+    }
+    @media (max-width: 375px) {
+      padding: 40px 18px;
+      width: 100%;
+      margin:0;
+    }
+
+    h2 {
+      width: 50%;
+      margin:0;
+      color: $brand-color;
+      font-size: 27px;
+      line-height: 37px;
+      letter-spacing: -0.07em;
+      text-transform: uppercase;
+      font-family: 'YesevaOne';
+      @media (max-width: 900px) {
+        width: 100%;
+        font-size: 25px;
+      }
+      @media (max-width: 768px) {
+        font-size: 20px;
+        padding-bottom: 20px;
+      }
+      @media (max-width: 414px) {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      @media (max-width: 375px) {
+        width: 100%;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+      }
+    }
+
+    &--apartment-description {
+      font-family: 'FuturaBook';
+      font-size: 18px;
+      line-height: 29px;
+      color: $text-color-white;
+      @media (max-width: 900px) {
+        font-size: 16px;
+      }
+      @include hide-block (768px);
+
+      @media (max-width: 414px){
+        display: block;
+        width: 100%;
+        padding-left: 20px;
+      }
+      @media (max-width: 375px) {
+        width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+      }
+    }
+
+    &--apartment-info-wrap{
+      @include grid();
+      grid-template-columns: repeat(2, 1fr); 
+      grid-template-rows: repeat(2, 1fr); 
+      @media (max-width: 414px){
+        display: none;
+      }
+      
+     .title-wrapper {
+  
+        h3 {
+          font-family: 'YesevaOne';
+          color:$brand-color;
+          font-size: 18px;
+          line-height: 25px;
+          text-transform: uppercase;
+          @media (max-width: 900px) {
+            font-size: 16px;
+          }
+          @media (max-width: 375px) {
+            font-size: 14px;
+            line-height: 19px;
+          }
+        }
+
+        p {
+          color: $text-color-white;
+          font-family: 'FuturaBook';
+          font-size: 15px;
+          line-height: 20px;
+          width: 50%;
+          @media (max-width: 768px) {
+            width: 80%;
+          }
+          @media (max-width: 375px) {
+            font-size: 14px;
+            line-height: 19px;
+            width: 55%;
+         }
+        }
+      }
+
+    }
+   
+  }
+
+  &__slider {
+    width: 63%;
+    @media (max-width: 740px) {
+      z-index: 1;
+    }
+    @media (max-width: 414px) {
+      width: 100%;
+    }
+    @media (max-width: 375px) {
+      width: 100%;
+      padding: 0 18px 40px 18px;
+    }
+
+    nav{
+      width: 70%;
+      @media (max-width: 1300px){
+        width: 90%;
+      }
+      @include hide-block (414px);
+      @include hide-block (375px);
+
+      ul{
+        @extend %inline-list;
+
+        li{
+          @extend %inline-list-items;
+          font-family: 'YesevaOne';
+          @media (max-width: 768px) {
+            font-size: 11px;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          &:first-child a{
+            color: $brand-color;
+            text-decoration: underline;
+          }
+          
+          a{
+            color: rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+    }
+
+    &--img-wrapper {
+      overflow: hidden;
+      @include flexbox();
+      padding-left: 40px;
+      position: relative;
+      @media (max-width: 768px) {
+        padding-right: 40px;
+      }
+      @media (max-width: 375px) {
+        @include background('../assets/images/portf2mob.jpg'); 
+        height: 242px;
+        padding: 0;
+        margin: 0;
+      }
+      & :first-child {
+        max-width: 78%;
+        object-fit: cover;
+        @media (max-width: 1024px) {
+          max-width: 100%;
+        }
+        @include hide-block(375px);
+      }
+      & :nth-child(2){
+        height: 482px;
+        max-width: 20%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: -115px;
+        object-position: -115px;
+        margin-left: 20px;
+        @include hide-block(1024px);
+        @media (max-width: 375px) {
+          @include hide-block(375px);
+        }
+      }
+
+  
+    }
+    &--prev-city {
+      display: none;
+      @include round-btn('../assets/images/Vector(Stroke).svg', 10px, 20px);
+      position: absolute;
+      width:55px;
+      height: 55px;
+      
+      transform: rotate(180deg);
+
+      @media (max-width: 1024px) {
+        display: block;
+        bottom: 40%;
+        left: 70px;
+      }
+      @media (max-width: 414px){
+        width:37px;
+        height: 37px;
+      }
+      @media (max-width: 375px){
+        display: block;
+        bottom: 102px;
+        left: 13px;
+       
+        }
+        &::before {
+          margin: 0 auto;
+        }
+      }
+      
+    &--next-city {
+      @include round-btn('../assets/images/Vector(Stroke).svg', 10px, 20px);
+        position: absolute;
+        bottom: 222px;
+        right: 45px;
+        width:55px;
+        height: 55px;
+        @media (max-width: 1024px) {
+          bottom: 40%;
+        }
+        @media (max-width: 414px){
+          width:37px;
+          height: 37px;
+        }
+        @media (max-width: 375px) {
+          bottom: 102px;
+          right: 13px;
+        }
+        &::before {
+          margin: 0 auto;
+        }
+    }
+  }
+    
+
+  
+  
+}

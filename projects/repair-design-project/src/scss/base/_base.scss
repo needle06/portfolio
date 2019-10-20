@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  @media (max-width: 375px) {
+    width: 375px;
+  }
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: normal;
+}

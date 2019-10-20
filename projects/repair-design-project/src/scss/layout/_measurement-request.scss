@@ -1,0 +1,53 @@
+.measurement-request {
+  display: grid;
+  grid-template-columns: 60% 35%;
+  grid-template-rows: 690px 72px;
+  @media (max-width: 1024px){
+    @include flexbox();
+    @include justify-content(space-between);
+    padding: 50px 20px;
+  }
+  &__bg-steps {
+    @include background('../assets/images/Group22.jpg');
+    background-size: contain;
+    @media (max-width: 1024px){
+      width: 60%;
+    }
+  }
+  &__form-title {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 60%; 
+    margin: 30px 105px 40px 105px;
+    @media (max-width: 1113px){
+      width: 90%; 
+      margin: 10px auto;
+      font-size: 18px;
+    }
+  }
+  &__discount-text {
+    display: flex;
+    grid-column: 2;
+    align-items: center;
+    @include hide-block(1024px);
+    &--logo {
+      @include round-btn ('../assets/images/piggy.svg', 60px, 60px, 17px 17px);
+      width: 72px;
+      height: 72px;
+    }
+    p {
+      width: 50%;
+      font-family: 'FuturaDemiC';
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 25px;
+      color: #E3B873;
+      text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+      margin-left: 25px;
+    }
+  }
+  @include hide-block(375px);
+
+}

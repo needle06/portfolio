@@ -1,0 +1,77 @@
+///  Text color
+$text-color-white: #FFFFFF;
+$text-color-black: #000000;
+
+/// Main brand color
+$brand-color: #E3B873;
+
+/// Background-color
+$bg-color: #131313;
+
+
+/// Container's maximum width
+$max-width: 1440px;
+
+
+/// Breakpoints map
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+// Navigation
+%inline-list {
+  list-style: none;
+  @include flexbox();
+  @include justify-content(space-between);
+}
+
+%inline-list-items {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-family: 'FuturaBook';
+}
+
+//Round button
+%circle {
+  border-radius: 50%;
+  background: $brand-color;
+}
+
+%title-wrapper {
+  font-family: 'YesevaOne';
+  padding-top: 90px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  width: 257px;
+}
+
+//Form-ilabelputs
+%label {
+  font-family: 'FuturaBook';
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(54, 54, 54, 0.5);
+}
+
+%input {
+  font-family: 'FuturaBook';
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding-bottom: 8px;     
+}
+
+%checkbox {
+  font-family: 'FuturaBook';
+  font-size: 16px;
+  line-height: 22px;
+  color: #181818;
+  position: relative;
+  padding-left: 26px;
+}

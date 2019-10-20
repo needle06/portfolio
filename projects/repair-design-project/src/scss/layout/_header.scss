@@ -1,0 +1,118 @@
+header, footer {
+  width: 100%;
+  @include flexbox();
+  background-color: $bg-color;
+  color: $text-color-white;  
+  padding: 24px 100px 24px 80px; 
+  @media (max-width: 1091px){
+    padding: 24px 20px 24px 80px; 
+  }
+  @media (max-width: 860px){
+    padding: 24px 20px 24px 20px; 
+  }
+  @media (max-width: 375px){
+    padding: 23px 18px;
+  }
+
+  h1 {
+    color: $brand-color;
+    font-family: 'FuturaDemic';
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 20%;
+    margin: auto 0; 
+    @media (max-width: 1024px) {
+      width: 15%;
+      font-size: 12px;
+    }
+    @media (max-width: 711px) {
+      width: 55%;
+      font-size: 14px;
+      padding-left: 80px;
+    }
+    @media (max-width: 375px){
+      font-size: 12px;
+      width: 65%;
+      padding: 0;
+    }     
+  }
+
+  nav {
+    width: 50%;
+    @include hide-block(711px);
+
+
+    ul {
+      list-style: none;
+      @include flexbox();
+      @include justify-content(space-between);
+    }
+  
+    li { 
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-family: 'FuturaBook';
+      // padding-right: 23px;
+      &:hover {
+        cursor: pointer;
+      }
+      &:first-child {
+        color: $brand-color;
+      }
+      @media (max-width: 1024px) {
+        font-size: 12px;
+      }
+    }
+  
+    a {
+      display: block;
+    }
+  }
+
+  .header__tel-info {
+    width: 35%;
+    @include flexbox();
+    @include justify-content(space-evenly);
+    @include align-items(center);
+    @media (max-width: 860px) {
+      @include justify-content(flex-end);
+    }
+    @media (max-width: 711px) {
+     width: 40%;
+    }
+
+    a {
+      font-family: 'FuturaDemic';
+      font-size: 14px;
+      display: block;
+      @media (max-width: 1024px) {
+        font-size: 12px;
+      }
+      @media (max-width: 375px) {
+        color: #ffffff;
+      }
+
+    }
+    
+    button {
+      @media (max-width: 1024px) {
+        font-size: 12px;
+        width: 140px;
+      }
+      @media (max-width: 860px) {
+        font-size: 10px;
+        width: 120px;
+        margin-left: 10px;
+      }
+      @media (max-width: 711px) {
+        font-size: 12px;
+        width: 150px;
+        margin-left: 10px;
+      }
+
+      @include hide-block(620px);
+    }
+
+  }
+}

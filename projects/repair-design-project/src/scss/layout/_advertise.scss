@@ -1,0 +1,124 @@
+.advertise {
+  width:100%;
+  position: relative;
+  @include flexbox();
+  &:before {
+    content: '';
+    width: 100%;
+    height: 707px;
+    background: #000000;
+    opacity: 0.5;
+    position: absolute;
+    @include hide-block(375px);
+  }
+
+  &__instagram-block {
+    width: 82px;
+    height: 707px;
+    background: $bg-color;
+    @include hide-block(414px);
+
+    @media (max-width: 740px) {
+      height: auto;
+      width: 50px;
+    }
+    a {
+      display: block;
+      text-transform: uppercase;
+      color: $brand-color;
+      @include transform(rotate(90deg));
+      margin-top: 285px;
+      @media (max-width: 740px) {
+        margin-top: 100px;
+      }
+    }
+  }
+
+  &__wrapper{
+    width: 100%;
+    @include background ("../assets/images/bg-adv.jpg");
+    @include flexbox();
+    @include flex-direction(column);
+    padding-left: 60px;
+    padding-top: 195px;
+    background-size: cover;
+    @media (max-width: 1050px){
+      padding-top: 100px;
+    }
+    @media (max-width: 740px) {
+      padding-top: 50px;
+    }
+  
+    @media (max-width: 375px) {
+      padding: 85px 18px;
+      background-position-x: center;
+    }
+
+    &--title {
+      font-family: 'YesevaOne';
+      text-transform: uppercase;
+      font-size: 40px;
+      line-height: 53px;
+      width: 40%;
+      color: $text-color-white;
+      margin: 0;
+      z-index: 1;
+
+      @media (max-width: 1050px) {
+        width: 60%;
+      }
+      @media (max-width: 740px) {
+        width: 80%;
+        font-size: 25px;
+        line-height: 24px;
+      }
+      @media (max-width: 375px) {
+        font-size: 23px;
+        line-height: 24px;
+        width: 100%;
+      }
+
+      span.rostov {
+        color: $brand-color;
+      }
+    }
+
+    &--sale-text{
+      font-family: 'FuturaBook';
+      font-size: 22px;
+      line-height: 30px;
+      width: 40%;
+      color: $text-color-white;
+      z-index: 1;
+      @media (max-width: 740px) {
+        padding-top: 20px;
+        width: 80%;
+        font-size: 20px;
+      }
+      @media (max-width: 375px) {
+        font-size: 18px;
+        line-height: 24px;
+        width: 100%;
+      }
+    }
+
+    &--btn-group {
+      width: 40%;
+      z-index: 1;
+      @media (max-width: 1250px) {
+        width: 70%;
+      }
+      @media (max-width: 781px) {
+        width: 100%;
+      }
+      @media (max-width: 740px) {
+        padding-bottom: 10px;
+      }
+      @media (max-width: 375px) {
+        width: 100%;
+      }
+    }
+  }
+
+
+}

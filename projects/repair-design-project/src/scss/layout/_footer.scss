@@ -1,0 +1,41 @@
+footer {
+  height: 133px;
+  @include hide-block(375px);
+  @include align-items(center);
+  
+  p {
+    color: $brand-color;
+    font-family: 'FuturaDemic';
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 20%;
+    @media (max-width:768px) {
+      width: 40%
+    };
+  }
+
+  .footer__tel-info {
+    width: 35%;
+    @include flexbox();
+    @include justify-content(space-evenly);
+    @include align-items(center);
+    @media (max-width:768px) {
+      width: 50%
+    };
+    a {
+      font-family: 'FuturaDemic';
+      font-size: 14px;
+      display: block
+      
+    }
+
+    button {
+        height: 37px;
+        width: 160px;
+      }
+  }
+  
+  nav {
+    @include hide-block (768px);
+  }
+}
