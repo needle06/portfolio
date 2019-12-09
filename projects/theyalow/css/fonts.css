@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Asap';
+  src: url('../assets/fonts/asap/Asap-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Asap';
+  src: url('../assets/fonts/asap/Asap-BoldItalic.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Asap';
+  src: url('../assets/fonts/asap/Asap-MediumItalic.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Asap';
+  src: url('../assets/fonts/asap/Asap-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LucidaSans-Italic';
+  src: url('../assets/fonts/LSANSI.TTF');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-ExtraBold.ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-ExtraBoldItalic.ttf');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-LightItalic.ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-Semibold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/open-sans/OpenSans-SemiboldItalic.ttf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'PTSans-Regular';
+  src: url('../assets/fonts/pt-sans/PTC55F.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans-NarrowBold';
+  src: url('../assets/fonts/pt-sans/PTN77F.ttf');
+}
+
+@font-face {
+  font-family: 'SegoeWP-Light';
+  src: url('../assets/fonts/segoe-wp-cufonfonts/segoe-wp-light.ttf');
+}
+
+@font-face {
+  font-family: 'SegoeWP,';
+  src: url('../assets/fonts/segoe-wp-cufonfonts/SegoeWP.ttf');
+}
+
+@font-face {
+  font-family: 'SegoeUI-Light';
+  src: url('../assets/fonts/segoe-wp-cufonfonts/10389.ttf');
+}
+
+@font-face {
+  font-family: 'SegoeUI';
+  src: url('../assets/fonts/segoe-wp-cufonfonts/9404.ttf');
+}
+
+@font-face {
+  font-family: 'SegoeUI-Bold';
+  src: url('../assets/fonts/segoe-wp-cufonfonts/10391.ttf');
+}
